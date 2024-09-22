@@ -21,15 +21,12 @@ export const UserSelector = ({ onUserSelect, selectedUsers, postId }) => {
     const [open, setOpen] = useState(false)
     const [users, setUsers] = useState<Usuario[]>([])
     
-    // const relatoController = new RelatoController()
-    
     useEffect(() => {
         async function getUsers() {
             try {
                 const usersData = await usuarioController.Listar(postId);
                 if (Array.isArray(usersData)) {
                     setUsers(usersData);
-                    console.log(usersData);
                 } else {
                     console.error('Expected an array, but got:', usersData);
                     setUsers([]);

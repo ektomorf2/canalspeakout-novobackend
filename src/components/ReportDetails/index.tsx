@@ -239,11 +239,11 @@ function ReportDetails({
                                 {/* <CardItem title="Visualizações de status" value="3" /> */}
                             </Grid>
                             <Grid item xs={12} sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5, mb: 2 }}>
-                                <CardItem title="Horário para contato" value={post.HorarioContato['horario-contato']} />
+                                <CardItem title="Horário para contato" value={post.HorarioContato} />
                                 <CardItem title="Organização" value={post.Empresa} />
                             </Grid>
                             <Grid item xs={12} sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5, mb: 2 }}>
-                                <CardItem title="Área de atuação" value={post.AreaDenunciante['area-atuacao']} />
+                                <CardItem title="Área de atuação" value={post.AreaDenunciante} />
                                 <CardItem title="Telefone" value="3134479890" />
                             </Grid>
                             <Grid item xs={12} sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5, mb: 2 }}>
@@ -279,7 +279,7 @@ function ReportDetails({
                                 <ColumnGrid>
                                     <CardItem
                                         title="Nome do denunciado"
-                                        value={post.NomeInfrator['autor-ocorrencia']}
+                                        value={post.NomeInfrator}
                                     />
                                 </ColumnGrid>
                                 <ColumnGrid>
@@ -314,7 +314,7 @@ function ReportDetails({
                                     xs={12}
                                     sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5, mb: 2 }}
                                 >
-                                    <CardItem title="Tipo" value={post.Infracao['tipo-denuncia']} />
+                                    <CardItem title="Tipo" value={post.Infracao} />
                                     <CardItem title="Infração do código de ética" value={post.CodigoEtica} />
                                 </Grid>
                                 <Grid
@@ -324,7 +324,7 @@ function ReportDetails({
                                 >
                                     <CardItem
                                         title="Grau de certeza"
-                                        value={post.GrauCerteza['grau-de-certeza-denuncia']}
+                                        value={post.GrauCerteza}
                                     />
                                     <CardItem title="Data do incidente" value={formattedDate} />
                                 </Grid>
@@ -335,10 +335,10 @@ function ReportDetails({
                                 >
                                     <CardItem
                                         title="Continua ocorrendo"
-                                        value={post.Recorrencia['recorrencia-ocorrencia']}
+                                        value={post.Recorrencia}
                                     />
 
-                                    <CardItem title="Localidade" value={post.LocalInfracao['local-ocorrencia']} />
+                                    <CardItem title="Localidade" value={post.LocalInfracao} />
                                 </Grid>
                                 <Grid
                                     item
@@ -347,11 +347,11 @@ function ReportDetails({
                                 >
                                     <CardItem
                                         title="Nome das testemunhas"
-                                        value={post.TemTestemunha['sim-testemunhas-ocorrencia']}
+                                        value={post.Testemunhas}
                                     />
                                     <CardItem
                                         title="Descrição da ocorrência"
-                                        value={post.TemTestemunha['nao-testemunhas-ocorrencia']}
+                                        value={post.Recorrencia}
                                     />
                                     <CardItem
                                         title="Descrição da ocorrência"
